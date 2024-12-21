@@ -1,0 +1,40 @@
+[
+    {
+      "namefile": "Супер важный PDF-файл с расписанием на 2023 год",
+      "fileauthor": "Пахомов Александр",
+      "filedate": "2021-01-09",
+      "type": "pdf"
+    },
+    {
+      "namefile": "Критерии оценки на экзамене в 2023 году",
+      "fileauthor": "Пахомов Александр",
+      "filedate": "2021-02-09",
+      "type": "doc"
+    },
+    {
+      "namefile": "Табличка со списком покупок",
+      "fileauthor": "Пахомов Александр",
+      "filedate": "2021-01-08",
+      "type": "xls"
+    },
+    {
+      "namefile": "Фотка с отпуска, в который я так хочу вернуться...",
+      "fileauthor": "Пахомов Александр",
+      "filedate": "2020-01-09",
+      "type": "png"
+    },
+    {
+      "namefile": "TXTTXTXTXTTX...",
+      "fileauthor": "Пахомов Александр",
+      "filedate": "2020-01-09",
+      "type": "txt"
+    }
+    ,
+    {
+      "namefile": "HTML HTML...",
+      "fileauthor": "Пахомов Александр",
+      "filedate": "2020-01-09",
+      "type": "html"
+    }
+  ]
+  

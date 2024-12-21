@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>File archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+    <body onload="Load_Data()">
+        <div id="loader">
+            <div class="spinner"></div>
+    </div>
+    <header>
+        <div class="container-header">
+            <div class="var-categories">
+                <div class="variant">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_23_2753)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.2 0H12.8V8.27451L6.94904 2.42355L2.42355 6.94902L8.27453 12.8H0V19.2H8.27451L2.42355 25.0509L6.94904 29.5765L12.8 23.7254V32H19.2V23.7254L25.051 29.5765L29.5765 25.051L23.7254 19.2H32V12.8H23.7254L29.5765 6.94902L25.051 2.42354L19.2 8.27451V0Z" fill="#0D1421"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_23_2753">
+                        <rect width="32" height="32" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <p>Вариант 9</p>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">
+                        Ξ
+                      <span class="arrow"><img src="images/downArrow.svg" alt=""></span>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Все файлы</a>
+                      <a href="#">Избранное</a>
+                      <a href="#">Корзина</a>
+                      <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_23_2762)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.85 14.282C16.0253 13.6477 16.9555 12.6394 17.493 11.4168C18.0306 10.1942 18.1449 8.82722 17.8178 7.53233C17.4907 6.23744 16.7409 5.0887 15.6872 4.26807C14.6335 3.44744 13.3361 3.00183 12.0005 3.00183C10.6649 3.00183 9.36755 3.44744 8.31384 4.26807C7.26013 5.0887 6.51034 6.23744 6.18324 7.53233C5.85613 8.82722 5.97041 10.1942 6.50798 11.4168C7.04555 12.6394 7.97566 13.6477 9.151 14.282C5.962 14.867 3 16.23 3 17V21H21V17C21 16.23 18.038 14.868 14.85 14.282ZM16 9.00002C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13C10.9391 13 9.92172 12.5786 9.17157 11.8284C8.42143 11.0783 8 10.0609 8 9.00002C8 7.93915 8.42143 6.92173 9.17157 6.17159C9.92172 5.42144 10.9391 5.00002 12 5.00002C13.0609 5.00002 14.0783 5.42144 14.8284 6.17159C15.5786 6.92173 16 7.93915 16 9.00002ZM19 17.748V19H5V17.748C5.377 17.53 5.947 17.268 6.673 17.008C8.269 16.438 10.287 16 12 16C13.713 16 15.73 16.438 17.327 17.009C18.053 17.268 18.623 17.53 19 17.749V17.748Z" fill="#0D1421"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_23_2762">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg></a>
+                    </div>
+                </div> 
+                <div class="categories">
+                    <p class="allFiles">Все файлы</p>
+                    <p class="favorites">Избранное</p>
+                    <p class="basket">Корзина</p>
+                </div>
+            </div>
+            
+            <div class="user">
+                <button>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_23_2762)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.85 14.282C16.0253 13.6477 16.9555 12.6394 17.493 11.4168C18.0306 10.1942 18.1449 8.82722 17.8178 7.53233C17.4907 6.23744 16.7409 5.0887 15.6872 4.26807C14.6335 3.44744 13.3361 3.00183 12.0005 3.00183C10.6649 3.00183 9.36755 3.44744 8.31384 4.26807C7.26013 5.0887 6.51034 6.23744 6.18324 7.53233C5.85613 8.82722 5.97041 10.1942 6.50798 11.4168C7.04555 12.6394 7.97566 13.6477 9.151 14.282C5.962 14.867 3 16.23 3 17V21H21V17C21 16.23 18.038 14.868 14.85 14.282ZM16 9.00002C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13C10.9391 13 9.92172 12.5786 9.17157 11.8284C8.42143 11.0783 8 10.0609 8 9.00002C8 7.93915 8.42143 6.92173 9.17157 6.17159C9.92172 5.42144 10.9391 5.00002 12 5.00002C13.0609 5.00002 14.0783 5.42144 14.8284 6.17159C15.5786 6.92173 16 7.93915 16 9.00002ZM19 17.748V19H5V17.748C5.377 17.53 5.947 17.268 6.673 17.008C8.269 16.438 10.287 16 12 16C13.713 16 15.73 16.438 17.327 17.009C18.053 17.268 18.623 17.53 19 17.749V17.748Z" fill="#0D1421"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_23_2762">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>                        
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="filters">
+            <div class="filters-buttons">
+                <button class="button-filter" id="pdf" onclick="toggleButton(this)">
+                    PDF
+                    <div class="cross">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L1 11M1 1L11 11" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>    
+                </button>
+                <button class="button-filter" id="doc" onclick="toggleButton(this)">
+                    DOC
+                    <div class="cross">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L1 11M1 1L11 11" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>                     
+                </button>
+                <button class="button-filter" id="xls" onclick="toggleButton(this)">
+                    XLS
+                    <div class="cross">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L1 11M1 1L11 11" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>                
+                </button>
+                
+                <button class="button-filter" id="png" onclick="toggleButton(this)">
+                    PNG  
+                    <div class="cross">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L1 11M1 1L11 11" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div> 
+                </button>
+                <button class="button-filter" id="txt" onclick="toggleButton(this)">
+                    TXT  
+                    <div class="cross">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L1 11M1 1L11 11" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div> 
+                </button>
+                <button class="button-filter" id="html" onclick="toggleButton(this)">
+                    HTML  
+                    <div class="cross">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L1 11M1 1L11 11" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div> 
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">
+                  Сортировка
+                  <span class="arrow"><img src="images/downArrow.svg" alt=""></span>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#" onclick="selectOption('По умолчанию')">По умолчанию</a>
+                  <a href="#" onclick="selectOption('Сначала новые')">Сначала новые</a>
+                  <a href="#" onclick="selectOption('Сначала старые')">Сначала старые</a>
+                </div>
+            </div> 
+            
+        </div>
+        <div id="files"></div>
+    </main>
+
+    <footer>
+        <p>©️ Вариант 9. Мозгунова Алина, группа ПИ-22-2</p>
+    </footer>
+</body>
+</html>
